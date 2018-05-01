@@ -1,0 +1,550 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 17, 1);
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(17, 17, 17, 1)),
+    color-stop(70%, rgba(17, 17, 17, 1)),
+    color-stop(100%, rgba(8, 2, 8, 1))
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(17, 17, 17, 1)),
+    color-stop(70%, rgba(17, 17, 17, 1)),
+    to(rgba(8, 2, 8, 1))
+  );
+  background: linear-gradient(
+    to right,
+    rgba(17, 17, 17, 1) 0%,
+    rgba(17, 17, 17, 1) 70%,
+    rgba(8, 2, 8, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr='#111111',
+      endColorstr='#080208',
+      GradientType=1
+    );
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+body {
+  position: absolute;
+}
+
+.loader-ctr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 111;
+  background: black;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.loader {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  border: 8px solid black;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  background-color: #ee3724;
+}
+
+.loader:before {
+  -webkit-animation: animate 5s infinite ease-in-out;
+  animation: animate 5s infinite ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.loader:after {
+  -webkit-animation: animate2 5s infinite ease-in-out;
+  animation: animate2 5s infinite ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes animate {
+  100% {
+    -webkit-transform: rotate(180deg) skew(360deg);
+    transform: rotate(180deg) skew(360deg);
+  }
+}
+
+@keyframes animate {
+  100% {
+    -webkit-transform: rotate(180deg) skew(360deg);
+    transform: rotate(180deg) skew(360deg);
+  }
+}
+
+@-webkit-keyframes animate2 {
+  100% {
+    -webkit-transform: rotate(-180deg) skew(-360deg);
+    transform: rotate(-180deg) skew(-360deg);
+  }
+}
+
+@keyframes animate2 {
+  100% {
+    -webkit-transform: rotate(-180deg) skew(-360deg);
+    transform: rotate(-180deg) skew(-360deg);
+  }
+}
+
+.time_circles > div > span {
+  color: #fcfcfc;
+}
+
+.time_circles > div > h4 {
+  color: #fcfcfc;
+}
+
+.DateCountdown {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  margin: auto;
+  top: -50px;
+}
+.home-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
+.logo__img {
+  width: 250px;
+}
+.coming-soon {
+  font-family: 'Raleway', sans-serif;
+  font-size: 72px;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 25px;
+  z-index: 2;
+  font-weight: 300;
+}
+.contact-outer {
+  text-align: center;
+}
+.contact {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  top: -50px;
+}
+.contact .btn {
+  display: block;
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 1px 1px 10px 3px hsla(0, 0%, 0%, 0.6);
+  box-shadow: 1px 1px 10px 3px hsla(0, 0%, 0%, 0.6);
+  width: 10em;
+  padding: 1em;
+  color: #fdfdfd;
+  text-align: center;
+  text-shadow: 0 2px 0 hsla(0, 0%, 0%, 0.25);
+  font: 400 1.5em /1 'Raleway', sans-serif;
+  letter-spacing: 4px;
+  background: #ee3724;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.anim {
+  -webkit-animation: jiggle 3s ease-out infinite;
+  animation: jiggle 3s ease-out infinite;
+}
+
+@-webkit-keyframes jiggle {
+  48%,
+  62% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+  56% {
+    -webkit-transform: scale(0.9, 1.1) translate(0, -5px);
+    transform: scale(0.9, 1.1) translate(0, -5px);
+  }
+  59% {
+    -webkit-transform: scale(1, 1) translate(0, -3px);
+    transform: scale(1, 1) translate(0, -3px);
+  }
+}
+
+@keyframes jiggle {
+  48%,
+  62% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+  56% {
+    -webkit-transform: scale(0.9, 1.1) translate(0, -5px);
+    transform: scale(0.9, 1.1) translate(0, -5px);
+  }
+  59% {
+    -webkit-transform: scale(1, 1) translate(0, -3px);
+    transform: scale(1, 1) translate(0, -3px);
+  }
+}
+.contact__text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: #ee3724;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact__icon {
+  font-size: 32px;
+  margin-right: 30px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.contact__icon:last-child {
+  margin-right: 0;
+}
+.contact__icon:hover {
+  color: #ee3724;
+}
+
+@media screen and (max-width: 800px) {
+  body{
+    overflow-y: hidden;
+  }
+  .coming-soon {
+    font-size: 65px;
+    margin-bottom: 20px;
+  }
+  .contact {
+    top: -10px;
+  }
+  .contact .btn {
+    /*margin-top: 10px;*/
+    font-size: 16px;
+  }
+   
+}
+
+
+
+.modal-header,.modal-body {
+  background: #fcfcfc;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 16px;
+}
+#snackbar {
+  font-size: 14px;
+  visibility: hidden;
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #333;
+  color: #fff;
+
+  border-radius: 2px;
+  position: fixed;
+  z-index: 1111111;
+  left: 50%;
+  top: 30px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border: 1px solid #ee3724;
+}
+#snackbar > p:first-of-type {
+  margin-bottom: 10px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 6s;
+  animation: fadein 0.5s, fadeout 0.5s 6s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}

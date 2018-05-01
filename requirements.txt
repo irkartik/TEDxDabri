@@ -1,0 +1,7 @@
+Django==1.11.10
+MySQL-python==1.2.3
+Pillow==5.0.0
+pytz==2018.3
+gunicorn==19.7.1
+whitenoise==3.3.1
+MySQL-python==1.2.3

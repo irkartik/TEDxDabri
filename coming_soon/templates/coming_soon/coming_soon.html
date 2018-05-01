@@ -1,0 +1,174 @@
+  <!-- Frontend Credits: Akshansh Pandey and Sarthak Agarwal 
+  		Backend Developer: Raju Jha -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="img/tedx.jpg" />
+  <meta charset="utf-8">
+  <title>TedxDabri 2018</title>
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  {% load staticfiles %}
+  <!-- Added for 'Contact Us' -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" async>
+  <script type="text/javascript" src="{% static 'coming_soon/js/TimeCircles.js' %}"></script>
+  <link href="{% static 'coming_soon/css/TimeCircles.css' %}" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="{% static 'coming_soon/css/style.css' %}">
+  {% if message %}
+    <script type="text/javascript">
+      window.alert('Query Submitted');
+    </script>
+  {% endif %}
+
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113778626-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-113778626-1');
+	</script>
+
+
+
+
+  <style type="text/css">
+    .header {
+      width: 100%;
+      height: 100%;
+      background-color: #ee3724;
+      background-image: url('');
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      clip-path: polygon(35.1% 0%, 24.9% 0%, 43.9% 50%, 24.9% 100%, 35.1% 100%, 49.5% 63.1%, 63.9% 100%, 75.1% 100%, 55.1% 50%, 75.1% 0%, 63.9% 0%, 49.5% 36.9%);
+
+    }
+
+    .particles-js-canvas-el {
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #090b0c;
+      background-image: url('');
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      clip-path: polygon(35% 0.1%, 25% 0.1%, 44% 50%, 25% 99.9%, 35% 99.9%, 49.5% 63%, 64% 99.9%, 75% 99.9%, 55% 50%, 75% 0.1%, 64% 0.1%, 49.5% 37%);
+      /*       border: 2px solid red; */
+    }
+    
+    @media screen and (max-width: 800px) {
+  .particles-js-canvas-el {
+      clip-path: polygon(20% 0%, 0% 0%, 40% 50%, 0% 100%, 20% 100%, 48% 63%, 80% 99.9%, 100% 99.9%, 60% 50%, 100% 0%, 80% 0%, 50% 37%);
+      /*       border: 2px solid red; */
+  }
+}
+  </style>
+</head>
+
+<body class="home-page">
+  <div class="loader-ctr">
+    <div class="loader"></div>
+  </div>
+  <!-- <canvas class="header">
+  
+</canvas> -->
+  <!-- particles.js container -->
+  <div id="particles-js">
+  </div>
+  <!-- logo div -->
+
+  <div class="logo">
+    <img class="logo__img" src="{% static 'coming_soon/img/tedxdabrilogo.png' %}" alt="tedX Logo">
+  </div>
+
+  <p class="coming-soon text-centered">Coming Soon</p>
+  <!-- timer div -->
+  <div id="DateCountdown" data-date="2018-03-25 00:00:00" style="width: 100%;"></div>
+
+  <!-- contact us div -->
+  <section class="contact-outer">
+    <div class="contact">
+      <button class="btn anim" type="button" data-toggle="modal" data-target="#example2Modal">Contact Us</button>
+
+
+      <a target="_blank" href="https://www.facebook.com/TEDxDabri/" class="contact__icon">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <a target="_blank" href="https://www.instagram.com/tedxdabri/" class="contact__icon">
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/TEDxDabri" class="contact__icon">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+
+    </div>
+  </section>
+  
+  <!-- Query  -->
+  <div class="modal fade" id="example2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLabel" style="font-size: 30px">Feel free to ask</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <form action="{% url 'coming_soon:contact' %}" method="post">{% csrf_token %}
+            <div class="form-group">
+              <label for="recipient-name" class="form-control-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="form-control-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="form-control-label">Mobile Number</label>
+              <input type="text" class="form-control" id="mobnum" name="mobnum">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="form-control-label">Query</label>
+              <textarea rows="5" class="form-control" id="query" name="query" required></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" style="cursor: pointer;">Close</button>
+              <button type="submit" class="btn btn-danger" style="cursor: pointer;">Submit</button>
+            </div>
+          </form>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scripts -->
+  <script src="{% static 'coming_soon/js/particles.js' %}"></script>
+  <script src="{% static 'coming_soon/js/app.js' %}"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".header").hide().delay(1000).show();
+    });
+  </script>
+  <script src="https://use.fontawesome.com/60c16cb53f.js"></script>
+</body>
+
+</html>

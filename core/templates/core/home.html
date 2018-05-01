@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEDxDabri</title>
+  {% load static %}
+	  <link rel="shortcut icon" type="image/x-icon" href="{% static 'core/img/tedx.jpg'%}" />
+	  <meta charset="utf-8">
+	  <title>TedxDabri 2018</title>
+	  <meta name="author" content="TEDxDabri" />
+    <meta name="description" content="In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TEDTalks video and live speakers combine to spark deep discussion and connection in a small group. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized (subject to certain rules and regulations).">
+    <meta name="keywords" content="TED, dabri, tedxdabri, event, ted, tedx, delhi, dilli haat">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	  <!-- Added for 'Contact Us' -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" async>
+	  <script type="text/javascript" src="{% static 'core/js/TimeCircles.js' %} "></script>
+  <link href="{% static 'core/css/TimeCircles.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/style.css' %}">
+<!-- ''
+    <link rel="stylesheet" type="text/css" href="static/core/css/style_b.css"> -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113778626-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113778626-1');
+  </script>
+
+	  
+	 
+	  
+	  
+	  <style type="text/css">
+    .navbar-default .navbar-nav>li>a{
+      color: #bb0000;
+    }
+	    .particles-js-canvas-el {
+	      z-index: 0;
+      
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        background-color: #090b0c;
+        background-image: url('');
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        clip-path: polygon(35% 0.1%, 25% 0.1%, 44% 50%, 25% 99.9%, 35% 99.9%, 49.5% 63%, 64% 99.9%, 75% 99.9%, 55% 50%, 75% 0.1%, 64% 0.1%, 49.5% 37%);
+	    }
+	    #section{
+	    	text-align: center;
+	    }
+	    *{
+	    	padding: 0;
+	    	margin:0;
+	    }
+	    #loader{
+	    	z-index: 1000;
+	    }
+      #DateCountdown{
+        top: 150px;
+      }
+	    @media screen and (max-width: 800px) {
+      #DateCountdown{
+        top:250px;
+      }
+		  .particles-js-canvas-el {
+		      clip-path: polygon(20% 0%, 0% 0%, 40% 50%, 0% 100%, 20% 100%, 48% 63%, 80% 99.9%, 100% 99.9%, 60% 50%, 100% 0%, 80% 0%, 50% 37%);
+		      /*       border: 2px solid red; */
+		  }
+		}
+    .navbar-right
+    {
+       font-size:15px;
+       font-family: sans-serif;
+
+    }
+    .parallax {
+    /* The image used */
+    background-image: url("{% static 'core/img/back2.jpg'%}");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    }
+    .pic
+    {
+      height: 300px;border-color: red;
+      border-radius: 50%;
+      position: absolute;
+      width: 80%;
+
+      background-image: url("{% static 'core/img/back4.jpeg' %}");
+    }
+    .picc
+    {
+      height: 300px;border-color: red;
+      border-radius: 50%; 
+    }
+    .con
+    {
+      height: 400px;background-color:#1f040459;border-width:2px;border-color:#f00;border-radius: 2%;
+    }
+    .box
+    {
+      height: 600px;
+      margin-left: 15%;margin-right: 15%; margin-top: 15%;
+      background-color:black;border: 0px;box-shadow: 5px 5px 12px 0px #F7E6E6;
+    }
+    .pics
+    {
+      height: 175px;
+    }
+    .about:hover
+    {
+      color: red;
+      text-decoration: none;
+    }
+    .speak:hover
+    {
+      color: red;
+    }
+    .time_circles{
+      color: white;
+    }
+    .button{
+      top:75%;
+      left: 45%;
+      font-size: 2em;
+      position: absolute;
+      z-index: 100;
+      /**/
+      border: 0;
+      padding:0.5em;
+      border-radius: 5px;
+      color:white;
+      background-color: red;
+    }
+    .button:hover{
+      color:black;
+      background-color: red;
+    }
+    .box{
+      height:auto;
+    }
+    @media screen and (max-width: 450px)
+    {   
+      .button{
+        top:450px;
+        left: 40%;
+        padding:0.5em;
+        font-size: 1em;
+      }
+    	.box
+    	{ margin-left: 0px;margin-right: 0px; }
+
+      .prehype{
+        margin-left: 0px;margin-right: 0px;        
+      }
+      .prehype_box{
+       margin-left: 0px;margin-right: 0px; 
+      }
+
+    	#box1
+    	{height: 150px;}
+        .box2
+        {height: 170px;}
+        .box3
+        {height: 250px;padding-top: 10px;}
+         .box4
+        {height: 170px;}
+    }
+    
+</style>
+</head>
+<body class="home-page">
+  <div class="loader-ctr">
+      <div class="loader"></div>
+    </div>
+				<div id="particles-js" style="background: linear-gradient( to right, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 1) 70%, rgba(8, 2, 8, 1) 100% ); height: 100vh">
+          <header>
+            <nav id="home" class="navbar navbar-default" style="margin-bottom: 0%;background-color: #f8f8f800;border-color: #e7e7e700;">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                  </button>
+                  <a class="navbar-brand" href="#"><img src="{% static 'core/img/tedxdabrilogo.png' %}" style="width:170px;padding-left: 20px;"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#atheme">ABOUT THE THEME</a></li>
+                    <li><a href="#speakers">SPEAKERS</a></li>
+                    <li><a href="#prehype">PRE HYPE</a></li>
+                    <li><a href="#location">LOCATION</a></li>
+                    <li><a href="{% url 'coming_soon:home' %}">CONTACT US</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <div id="DateCountdown" data-date="2018-03-25 00:00:00" style="width: 100%;background: transparent; position:absolute;z-index: 100;" data-tc-id="6b5b608d-e544-7543-29bf-dc168a75f8cb" background-color: black;><div class="time_circles"><canvas width="1472" height="368"></canvas><div class="textDiv_Days" style="top: 129px; left: 0px; width: 368px;"><h4 style="font-size: 26px; line-height: 26px;">Days</h4><span style="font-size: 77px; line-height: 26px;">27</span></div><div class="textDiv_Hours" style="top: 129px; left: 368px; width: 368px;"><h4 style="font-size: 26px; line-height: 26px;">Hours</h4><span style="font-size: 77px; line-height: 26px;">14</span></div><div class="textDiv_Minutes" style="top: 129px; left: 736px; width: 368px;"><h4 style="font-size: 26px; line-height: 26px;">Minutes</h4><span style="font-size: 77px; line-height: 26px;">6</span></div><div class="textDiv_Seconds" style="top: 129px; left: 1104px; width: 368px;"><h4 style="font-size: 26px; line-height: 26px;">Seconds</h4><span style="font-size: 77px; line-height: 26px;">27</span></div></div></div>
+          <form action="https://www.yepdesk.com/tedxdabri">
+            <button href="https://www.yepdesk.com/tedxdabri" class="btn-default button">Book Tickets</button>
+          </form>
+
+        </div>
+
+				
+
+        <div class="parallax">
+          <div class="caption">
+            <div style="height: 100px;"></div>
+            <div class="thumbnail box">
+              
+                <div id="atheme" class="row" style="height:auto;padding-bottom: 10%;">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h1 class="head" style="text-align: center;">OUR THEME</h1>
+                  </div>
+                  <div class="col-md-4 col-sm-12 " id="box1" style="padding-top: 8%;padding-right: 3%;">
+                    <div class="col-sm-12 col-xs-12 col-md-12 box2">
+                      <a href="#" class="thumbnail box4" style="height:auto;border-width:0px;border-color: red;box-shadow: 5px 5px 12px 0px #5B0000;">
+                        <img src="{{text.theme_image.url}}" class="img-responsive" style="cursor:default;">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-8 col-xs-12 col-sm-12 box3" style="height:auto">
+                    <h3 class="atheme" name='atheme' style="text-align: center;">ABOUT THE THEME</h3>
+                    <P style="color:white; font-size:1.5em; padding-right: 5%; padding-left:5%;" class="text-justify">{{text.theme}}</P>
+                  </div>
+                    
+                </div>
+                
+            </div>
+            
+          </div>
+          <div id="speakers" class="caption">
+            <div class="thumbnail box">
+              <div class="col-md-12 col-sm-12 col-xs-12 ">
+                <h2 style="color: #fff; text-align: center;font-weight: bold;" class="speak"> OUR SPEAKERS </h2>
+              </div>
+              <div class="container" style="width: 100%;">
+                <div class="row">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="position: relative;width: 100%;">
+                    <ol class="carousel-indicators" style="background-position: center; opacity:1; " >
+                      {% for speaker in speakers %}
+                        <li data-target="#myCarousel" data-slide-to="{{forloop.counter0}}" class="active"></li>
+                      {% endfor %}
+
+                      <!-- <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li> -->
+               <!--       <li data-target="#myCarousel" data-slide-to="3"></li>-->
+                    </ol>
+                    <div class="carousel-inner img-responsive">
+                      {% for speaker in speakers %}
+                      {% if speaker.coming_soon %}
+                        <div class="item">
+                          <div class="col-sm-12 col-md-12 col-xs-12 " style="height:500px;">
+                            <h1 class="com">COMING SOON !!</h1>
+                          </div>
+                        </div>
+                      {% else %}
+                        <div class="item {% if forloop.counter0 == 0 %}active{% endif %}">
+                          <div class="col-md-5 col-sm-5 col-xs-12 " style="background-color:black;height: auto;padding-top: 5 ;padding-left: 5%;">
+                            <div class="thumbnail picc" style="background-image: url('{{ speaker.image.url }}'); background-size: cover;">
+                            </div>              
+                          </div>
+                          <div class="col-md-7 col-sm-7 col-xs-12 " style="padding-top: 4%;padding-right: 5%;">
+                            <div class="thumbnail con" style="height:auto;">
+                              <h1 style="color: #fb0000;font-size:2em; padding-left: 5%">{{speaker.name}}</h1>
+                              <p style="color:white; font-size:1.5em; padding-left: 5%">{{speaker.description}}</p>
+                            </div>
+                          </div>
+                        </div> 
+                      {% endif %}
+                      {% endfor %}
+
+
+                      <!-- <div class="item">
+                        <div class="col-md-5 col-sm-5 col-xs-5 " style="background-color:black;height: 500px;padding-top: 10%;padding-left: 5%;">
+                          <div class="thumbnail picc">
+                                <img src="#">
+                          </div>              
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7" style="padding-top: 4%;padding-right: 2%;">
+                          <div class="thumbnail con">
+                            <h1 style="color: #fb0000;font-size:2em; padding-left: 5%">hola</h1>
+                            <p style="color:white; font-size:1.5em; padding-left: 5%">kola</p>
+                          </div>
+                        </div>
+                      </div> -->
+                      
+                     
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="prehype" class="caption">
+            <div class="thumbnail box" id="prehype_box" style=" height: 750px;">
+              <div class="col-md-12 col-xs-12 col-sm-12 ">
+                <h2 style="color: #fff; text-align: center;font-weight: bold;"> PRE HYPE EVENTS </h2>
+              </div>
+           
+                <div class="container" style="width:auto">
+                  <div class="row">
+                    <div id="mycarousel" class="carousel slide" data-ride="carousel" style="position: relative;height: 740px;width: 100%;">
+                      <ol class="carousel-indicators" style="background-position: center; opacity:1;" >
+                      {% for prehype in prehype %}
+                        <li data-target="#myCarousel" data-slide-to="{{forloop.counter0}}" class="active"></li>
+                      {% endfor %}
+                        <!-- <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li> -->
+                      </ol>
+
+                      <div class="carousel-inner img-responsive">
+                      
+                      {% for prehype in prehype %}
+
+                      <div class="item {% if forloop.counter == 1 %}active{% endif %}">
+                        <div class="col-md-12 " style="padding-top: 4%;padding-right: 2%;">
+                          <div class="row">
+                            <div class="col-sm-4 col-md-4 col-xs-4 ">
+                              <div class="thumbnail pics" style="background: url('{{prehype.picture1.url}}'); background-size: cover;">
+                              </div>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-xs-4 ">
+                              <div class="thumbnail pics" style="background: url('{{prehype.picture2.url}}'); background-size: cover;">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-xs-4 ">
+                              <div class="thumbnail pics" style="background: url('{{prehype.picture3.url}}'); background-size: cover;">
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-3 col-md-3 col-xs-3">
+                              <div class="thumbnail pics" style="background: url('{{prehype.picture4.url}}'); background-size: cover;">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-xs-6 ">
+                              <div class="thumbnail pics" style="background: url('{{prehype.picture5.url}}'); background-size: cover;">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-xs-3">
+                              <div class="thumbnail pics" style="background: url('{{prehype.picture6.url}}'); background-size: cover;">
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-4 col-md-4 col-xs-4">
+                              <div class="thumbnail pics" style="background-image: url('{{prehype.picture7.url}}'); background-size: cover;">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-xs-4">
+                              <div class="thumbnail pics" style="background: url('{{prehype.picture8.url}}'); background-size: cover;">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-xs-4">
+                              <div class="thumbnail pics" style="background: url('{{prehype.picture9.url}}'); background-size: cover;">
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {% endfor %}
+
+
+
+                      
+                  <!--    <div class="item">
+                        <div class="col-md-4" style="background-color:black;height: 500px;padding-top: 15%;padding-left: 2%;padding-right: 5%;">
+                          <div class="thumbnail pic">
+                            
+                          </div>              
+                        </div>
+                        <div class="col-md-8" style="padding-top: 4%;padding-right: 2%;">
+                          <div class="row">
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-3">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="col-md-4" style="background-color:black;height: 500px;padding-top: 15%;padding-left: 2%;padding-right: 5%;">
+                          <div class="thumbnail pic">
+                            
+                          </div>              
+                        </div>
+                        <div class="col-md-8" style="padding-top: 4%;padding-right: 2%;">
+                          <div class="row">
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-3">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="thumbnail pics">
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div style="height: 100px;"></div>
+          </div>
+        </div>
+        
+			<div id="location" class="container-fluid col-md-12" style="padding: 0%;">
+        <iframe
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.2522744034572!2d77.09487421446599!3d28.62220029130056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04af4b4e801f%3A0xdd033cb9c35dd5d0!2sDilli+Haat%2C+Janakpuri%2C+Delhi!5e0!3m2!1sen!2sin!4v1519033677497" width="100%" height="400" frameborder="0" style="border:0"  allowfullscreen>
+        </iframe>
+      </div>
+      <section id="follow" id="contact" style="height: 320px;">
+        <div class="col-md-12" style="background-color: black; height:auto;padding-bottom: 5%; padding-top: 1%">
+          <h3 style="font-weight: bold;color: #fff;padding-left: 3%;padding-top: 1%;padding-right: 1%;">ABOUT <a href="https://www.ted.com/tedx/events/25228" style="color: #fff;" class="about"><span style="cursor: pointer;" class="about"> TEDx Dabri</span></a></h3>
+          <p style="color: #fff;padding-left: 3%;padding-top: 1%;padding-right: 1%; font-size: 1.5em;" style="text-justify">{{text.about}}</p>
+        </div>
+      <div class="col-md-12 col-xs-12 col-sm-12 social-icons">
+        <ul class="social-network social-circle">
+          {% for social in socials %}
+            <li><a target="_blank" href="{{social.url}}"><i class="fa fa-{{social.name}}"></i></a></li>
+          {% endfor %}
+        </ul>
+        <p>copyright&copy TedxDabri 2018. All rights reserved.</p>
+      </div>
+    </section>
+	  
+
+	
+	<script src="static/core/js/particles.js"></script>
+	<script src="static/core/js/app.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage();
+    });
+      $(document).ready(function () {
+        $(".header").hide().delay(1000).show();
+      });
+  </script>
+  <script src="{% static 'core/js/main.js' %}"></script>
+  
+	<script type="text/javascript">
+		var windowWidth = $(window).width();
+		$(document).ready(function () {
+			//man_front = $('');
+    cloud_back = $('.pic ');
+    
+    /*man = {
+        scroll : man_front.offset().top - window.innerHeight,
+        height : man_front.outerHeight(),
+        top : man_front.offset().top
+    };
+    man.scrollTill = man.top + man.height;*/
+    
+    cloud = {
+        scroll : cloud_back.offset().top - window.innerHeight,
+        height : cloud_back.outerHeight(),
+        top : cloud_back.offset().top
+    }
+    cloud.scrollTill = cloud.top + cloud.height;
+
+    //parallax javascript 
+    if(windowWidth > 800 )
+        $(window).scroll(function(){
+            var wScroll = window.scrollY;
+            if(wScroll > cloud.scroll && wScroll < cloud.scrollTill){
+                cloud_back.css({'transform':'translateX( -'+ (wScroll+800 - cloud.top)/70+'%'});
+            }
+            /*if(wScroll > man.scroll && wScroll < man.scrollTill){
+                man_front.css({'transform':'translate( ' + (wScroll-100 - man.top)/30 +'% , 0px'});
+            }else if(wScroll > cloud.scroll && wScroll < cloud.scrollTill){
+                cloud_back.css({'transform':'translateX( -'+ (wScroll+800 - cloud.top)/70+'%'});
+            }*/
+            //var wScroll = $(this).scrollTop();
+
+        });
+		});
+	</script>
+</body>
+</html>
